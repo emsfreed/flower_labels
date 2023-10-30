@@ -36,8 +36,17 @@ def read_plants(filename:str) -> Dict[str,int]:
 
 def main():
     composium = read_plants("plants.txt")
-    print(composium)
-
+    for plant_name, plant_amt in composium.items():
+        for i in range(plant_amt):
+            # pdb - the python debugger, will really help look at values during execution and resolve confusion
+            # when set_trace is hit (possibly multiple times) execution will stop and you can view variables by typing their names
+            # input `c` to continue until the next time set_trace is hit (or the end of execution)
+            # input `n` to step forward in execution line-by-line
+            # input `down` to step into functions being called
+            # input `up` to step back up out of functions being called
+            # import pdb
+            # pdb.set_trace()
+            print(plant_name)
 if __name__ == '__main__':
     main()
 
